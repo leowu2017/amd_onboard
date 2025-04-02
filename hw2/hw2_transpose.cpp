@@ -3,8 +3,8 @@
 #include <hip/hip_runtime.h>
 #include <hw_utils.hpp>
 
-unsigned const width = 4;
-unsigned const height = 4;
+unsigned const width = 1024;
+unsigned const height = 4096;
 using scalar_t = float;
 
 scalar_t matrix_in[height][width];
