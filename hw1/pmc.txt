@@ -1,0 +1,4 @@
+pmc: GRBM_COUNT GRBM_GUI_ACTIVE
+range: 0:1
+gpu: 0
+kernel: matrix_vector_multiplication_kernel
