@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-hipcc main.cpp -o hw1
+hipcc hw1.cpp -o hw1 -I ../include
 ./hw1
