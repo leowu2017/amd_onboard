@@ -9,7 +9,7 @@ docker build -t $IMAGE_NAME .
 docker run \
     --mount type=bind,source="$MOUNT_DIR",target=/app/git \
     --device /dev/kfd --device /dev/dri --security-opt seccomp=unconfined \
-    -it $IMAGE_NAME bash
+    --rm -it $IMAGE_NAME bash
 
 # docker run \
 #     -e USERNAME=$USERNAME \
