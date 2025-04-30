@@ -1,4 +1,4 @@
-MOUNT_DIR=/home/leowu102/git
+MOUNT_DIR=/data0/leowu102/git
 IMAGE_NAME=amd_onboard
 USERNAME=$(whoami)
 UID=$(id -u)
@@ -7,7 +7,7 @@ GID=$(id -g)
 docker build -t $IMAGE_NAME .
 
 docker run \
-    --mount type=bind,source="$MOUNT_DIR",target=/app/git \
+    --mount type=bind,source="$MOUNT_DIR",target=/workspace/git \
     --device /dev/kfd --device /dev/dri --security-opt seccomp=unconfined \
     --rm -it $IMAGE_NAME bash
 

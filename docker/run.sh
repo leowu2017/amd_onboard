@@ -1,8 +1,8 @@
-MOUNT_DIR=/home/leowu102/git
+MOUNT_DIR=/data0/leowu102/git
 CONTAINER_NAME=amd_onboard
 
 docker run \
-    --mount type=bind,source="$MOUNT_DIR",target=/app/git \
+    --mount type=bind,source="$MOUNT_DIR",target=/workspace/git \
     --device /dev/kfd --device /dev/dri --security-opt seccomp=unconfined \
     --name $CONTAINER_NAME \
     --rm -it \
